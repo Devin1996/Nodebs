@@ -1,0 +1,83 @@
+Rest - Representational State Transfer
+
+we can us eit totransfer data arount 
+alternative for tradional web page 
+
+Whats a restful API ?
+
+Ordinary
+
+Server -> Req                           Client
+	   <- Res (Html/js/css)
+
+
+
+Server	<-> Stores and fetches data but doesn't use/render HTML     				Client(Mobile App)
+	   	<-> Wants to acess third-party features (eg.google geo location Api)		Client(Code)
+	   	<-> Stores and fetches data but never renders a second HTML page    		Client(Browser w/SPA)
+
+Stateless Backends - they don't care about induvidual clients
+
+Restful Server(API)<urls>
+
+</users>				</posts> 				</products>
+[GET][POST][DELETE]     [GET][POST][PATCH]      [GET]
+   ^
+   |-------------
+   |			|
+   JSON			JSON
+   |			|
+   |Request		|
+   |("AJAX")	|
+   |			|Response
+   |			|
+   Client<------
+
+   Not A must to exchange data with JSON(But not html but possible)
+   XML
+   URLEncoded
+   FormData
+
+
+   RESTful Constraints
+
+   Client Server Arch. - Separation of concerns Restful API should not care about thr UI
+   Stateless - No Client Context (e.g.Session) is stored on the server
+   Cacheability - Responses must define themselves as cacheable or non-cacheble
+   Layered System - Intermediate servers may be used without the client knowing aboiu it
+   Uniform Interface - Resources are identified in Req, transfered data is decoupled from db schema
+   					   Self-descriptive messages links to further resources
+   Code on Demands(opt) - Executuable code could be transfered
+
+
+TO-Do
+
+
+{_________________OUR API____________________}
+
+  </buses>				           </bookings> 			
+  [GET][POST]				       [GET][POST]
+
+ </buses/{id}>                   </products/{id}>
+[GET][DELETE][PATCH]               [GET][DELETE]
+   
+express framwork
+
+npm install --save express
+
+//Don't have any built in services like in PHP
+ we just neeed to create a server from java script
+
+
+//automatically starting server
+
+npm install --save-dev nodemon
+
+
+//login package 
+
+npm install --save morgan
+
+
+
+
