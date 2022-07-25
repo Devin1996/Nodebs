@@ -1,1 +1,2 @@
 mongostore --db DBNAME path
+mongodump --db test
