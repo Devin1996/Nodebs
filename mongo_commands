@@ -1,0 +1,1 @@
+mongostore --db DBNAME path
